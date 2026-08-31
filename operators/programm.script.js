@@ -4,5 +4,5 @@ if (name) {
 } 
 
 else {
-    console.log ('' || 'Hello, Guest!');
+    console.log('Hello, Guest!');
 }
