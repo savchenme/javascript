@@ -1,42 +1,40 @@
 const userInput = Number(prompt('Введите число от 1 до 12'));
-const monthIndex = userInput - 1; /*js всегда считает месяцы от 0 до 11 
-через функцию getMonth(), поэтому в программе вычитаем 1*/
 
-switch (monthIndex) {
-    case 0:
+switch (userInput) {
+    case 1:
         alert('Январь')
         break;
-    case 1:
+    case 2:
         alert('Февраль')
         break;
-    case 2:
+    case 3:
         alert('Март')
         break;
-    case 3:
+    case 4:
         alert('Апрель')
         break;
-    case 4:
+    case 5:
         alert('Май')
         break;
-    case 5:
+    case 6:
         alert('Июнь')
         break;
-    case 6:
+    case 7:
         alert('Июль')
         break;
-    case 7:
+    case 8:
         alert('Август')
         break;
-    case 8:
+    case 9:
         alert('Сентябрь')
         break;
-    case 9:
+    case 10:
         alert('Октябрь')
         break;
-    case 10:
+    case 11:
         alert('Ноябрь')
         break;
-    case 11:
+    case 12:
         alert('Декабрь')
         break;
     default:
