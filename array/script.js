@@ -32,7 +32,7 @@ x = 6;
 console.log(x); //let используется для объявления переменных, которые могут быть перезаписаны
 /*однако в js повторное объявление переменных в одной области видимости могут привести к ошибке*/
 const y = 4;
-y = 7;
+// y = 7; /* выйдет ошибка, если раскомментировать строку*/
 console.log(y); //const используется для объявления констант, которые не могут быть перезаписаны
 
 let fruits = ['Dragonfruit', 'Pineapple', 'Kiwi'];
@@ -41,8 +41,14 @@ fruits = ['Banana', 'Apple', 'Peach']; /*поскольку новое знач�
 console.log(fruits);
 
 const berries = ['Strawberry', 'Blackberry', 'Raspberry'];
-berries = ['Blueberry','Raspberry'];
-console.log(berries); 
-//нельзя перезаписать константу у массива без использования push/pop/reduce
+berries.push = 'Blueberry'; // berries = ['Новый', 'Массив']; // Если раскомментировать, будет ошибка.
+berries.pop(); // удалит последний элемент
+//нельзя перезаписать константу у массива без использования push/pop/reduce/splice
 //но можно заменить значение у выбранного индекса в массиве [0]
+console.log(berries);
+
+const wildberries = ['Raspberry', 'Blackberry', 'Srawberry'];
+wildberries.splice(1,3); //удаляем два выбранных элемента, начиная с индекса 1
+wildberries.push = 'Blueberry';
+console.log(wildberries);
 
