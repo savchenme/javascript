@@ -38,17 +38,19 @@ console.log(y); //const используется для объявления к�
 let fruits = ['Dragonfruit', 'Pineapple', 'Kiwi'];
 fruits = ['Banana', 'Apple', 'Peach']; /*поскольку новое значение массива было объявлено через let, 
 благодаря js бразуер не увидит ошибки и разрешит вывести в консоль массив с новым значением*/
+fruits.pop();
+fruits.push('Mango');
 console.log(fruits);
 
 const berries = ['Strawberry', 'Blackberry', 'Raspberry'];
-berries.push = 'Blueberry'; // berries = ['Новый', 'Массив']; // Если раскомментировать, будет ошибка.
 berries.pop(); // удалит последний элемент
+berries.push('Blueberry'); // berries = ['Новый', 'Массив']; // Если раскомментировать, будет ошибка.
 //нельзя перезаписать константу у массива без использования push/pop/reduce/splice
-//но можно заменить значение у выбранного индекса в массиве [0]
 console.log(berries);
 
+//но можно заменить значение у выбранного индекса в массиве [0]
 const wildberries = ['Raspberry', 'Blackberry', 'Srawberry'];
 wildberries.splice(1,3); //удаляем два выбранных элемента, начиная с индекса 1
-wildberries.push = 'Blueberry';
+wildberries.push('Blueberry');
 console.log(wildberries);
 
