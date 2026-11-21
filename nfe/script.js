@@ -61,8 +61,27 @@ function findMinMax(arr) {
 console.log(findMinMax([40, 2, 5, 75, 13])); 
 
 /*5th task*/
-function sortArray(arr) {
-  return arr.sort((a, b) => a - b);
+// 1. В круглых скобках указываем, что функция ждёт любой массив снаружи
+function bubbleSort(arr) {
+  let swapped;
+  let end = arr.length - 1;
+
+  // 2. В циклах меняем числа местами прямо в переданном массиве
+  do {
+    swapped = false;
+    for (let j = 0; j < end; j++) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+        swapped = true;
+      }
+    }
+    end--;
+  } while (swapped);
+
+  return arr; // 3. Возвращаем этот же измененный массив
 }
 
-console.log(sortArray([25, 17, 23, 56, 32]));
+const myNumbers = [25, 17, 23, 56, 32]; // 4. Объявляем исходный массив снаружи и передаем его в функцию
+console.log(bubbleSort(myNumbers));
+console.log(myNumbers); 
+
